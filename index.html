@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Zen Walker - Developer Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of John Doe, a passionate developer with experience in creating dynamic and responsive web applications.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Home</h1>
+        <button id="hamburger-icon" onclick="toggleMenu()">☰</button>
+        <nav role="navigation" id="nav-menu">            
+            <ul>
+                <li><a href="#home" tabindex="0">Home</a></li>
+                <li><a href="#about-me" tabindex="0">About Me</a></li>
+                <li><a href="#projects" tabindex="0">Projects</a></li>
+                <li><a href="#skills" tabindex="0">Skills</a></li>
+                <li><a href="#contact" tabindex="0">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h2>Welcome Home</h2>
+            <p>Welcome to Zen Walker's Front-End Developer Portfolio</p>
+        </section>
+
+        <section id="about-me">
+            <h2>About Me</h2>
+            <p>Hello! I'm a passionate front-end developer specialized in Html, Css, Javascript, Git, C# & Blazor. I enjoy learning new technologies and improving my skills.</p>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div>
+                <button onclick="filterProjects('all')">All</button>
+                <button onclick="filterProjects('web')">Web Development</button>
+                <button onclick="filterProjects('mobile')">Mobile Development</button>
+                <button onclick="filterProjects('data')">Data Science</button>
+            </div>
+            <div class="project" data-category="web">
+                <h3>Project 1 - Web Site</h3>
+                <p>Web Development Project</p>
+                <img src="images/Proj1web.png" alt="Project 1 Web Site Image" onclick="openLightbox(this)">
+            </div>
+            <div class="project" data-category="mobile">
+                <h3>Project 2 - Mobile </h3>
+                <p>Mobile Development Project</p>
+                <img src="images/Proj2mobile.png" alt="Project 2 Mobile Image" onclick="openLightbox(this)">
+            </div>
+            <div class="project" data-category="data">
+                <h3>Project 3 - Data Science</h3>
+                <p>Data Science Project</p>
+                <img src="images/Proj3Data.png" alt="Project 3 Data Science Image" onclick="openLightbox(this)">
+            </div>
+            <div class="project" data-category="web">
+                <h3>Project 4 - Web Site</h3>
+                <p>Web Development Project</p>
+                <img src="images/Proj4Web.png" alt="Project 4 Web Site Image" onclick="openLightbox(this)">
+            </div>
+            <div class="project" data-category="data">
+                <h3>Project 5 - Data Science</h3>
+                <p>Data Science Project</p>
+                <img src="images/Proj5Data.png" alt="Project 3 Data Science Image" onclick="openLightbox(this)">
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>C#</li>
+                <li>Blazor</li>
+                <li>Git</li>
+                <li>.NET Framework</li>                
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <form id="contact-form" onsubmit="return validateForm()">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required tabindex="0">
+                    <span class="error" id="name-error"></span>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required tabindex="0">
+                    <span class="error" id="email-error"></span>
+                </div>
+                <div>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required tabindex="0"></textarea>
+                    <span class="error" id="message-error"></span>
+                </div>
+                <div>
+                    <button type="submit" tabindex="0">Send</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Zen Walker, Inc. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,425 @@
+/* General styles */
+html {
+    box-sizing: border-box;
+    font-size: 16px; /* Base font size */
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9; /* Light background color */
+    color: #333333; /* Dark text color */
+}
+
+/* Header styles */
+header {
+    background-color: #004080; /* Dark blue background */
+    color: #ffffff; /* White text */
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for header */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+/* Navigation styles */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 10px 0 0 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+    width: 100%;
+    max-width: 1400px; /* Adjusted max-width to fit three projects in one row */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Section styles */
+section {
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff; /* White background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for sections */
+}
+
+section#about-me {
+    text-align: left; /* Align text to the left */
+    font-size: 1.1em; /* Slightly larger font size for readability */
+    line-height: 1.8; /* Increase line height for better spacing */
+    margin-bottom: 20px;
+    background-color: #f9f9f9; /* Soft background color for card */
+    border: 1px solid #ddd; /* Light border for card */
+    border-radius: 8px; /* Rounded corners for card */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for card */
+    width: 100%;
+    max-width: 800px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and box-shadow */
+}
+
+section#about-me:hover {
+    transform: translateY(-10px); /* Lift the card slightly on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+section#projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px; /* Space between cards */
+    margin-bottom: 20px;
+}
+
+section#projects h2 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+section#projects article {
+    background-color: #f9f9f9; /* Soft background color for cards */
+    border: 1px solid #ddd; /* Light border for cards */
+    border-radius: 8px; /* Rounded corners for cards */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for cards */
+    width: calc(25% - 10px); /* Three cards per row with space between */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and box-shadow */
+}
+
+section#projects article:hover {
+    transform: translateY(-10px); /* Lift the card slightly on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+section#projects figure {
+    margin: 0 0 10px 0; /* Space below the image */
+}
+
+section#projects img {
+    max-width: 100%;
+    height: auto; /* Ensure images are responsive */
+    border-radius: 8px; /* Rounded corners for images */
+}
+
+section#skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+section#skills li {
+    margin: 10px 0;
+    padding-left: 25px;
+    position: relative;
+    font-size: 1.1em; /* Slightly larger font size for readability */
+}
+
+section#skills li::before {
+    content: "\2713"; /* Checkmark icon */
+    position: absolute;
+    left: 0;
+    color: #004080; /* Dark blue color for icons */
+    font-size: 1.2em; /* Slightly larger icon size */
+}
+
+footer {
+    background-color: #004080; /* Dark blue background */
+    color: #ffffff; /* White text */
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+/* Contact form styles */
+#contact {
+    background-color: #ffffff; /* White background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for form */
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+#contact h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #004080; /* Dark blue text */
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact form div {
+    margin-bottom: 15px;
+}
+
+#contact form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #333333; /* Dark text */
+}
+
+#contact form input,
+#contact form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc; /* Light gray border */
+    border-radius: 4px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+#contact form input:focus,
+#contact form textarea:focus {
+    border-color: #004080; /* Dark blue border on focus */
+    outline: none;
+}
+
+#contact form button {
+    background-color: #004080; /* Dark blue background */
+    color: #ffffff; /* White text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact form button:hover {
+    background-color: #003366; /* Darker blue on hover */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    section#projects article {
+        width: 100%; /* Full width for mobile view */
+    }
+}
+
+/* Vendor Prefixes */
+header, nav ul, main, section, footer {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+nav ul {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+nav ul li a {
+    -webkit-transition: color 0.3s ease;
+       -moz-transition: color 0.3s ease;
+        -ms-transition: color 0.3s ease;
+         -o-transition: color 0.3s ease;
+            transition: color 0.3s ease;
+}
+
+section {
+    -webkit-transition: transform 0.3s ease, box-shadow 0.3s ease;
+       -moz-transition: transform 0.3s ease, box-shadow 0.3s ease;
+        -ms-transition: transform 0.3s ease, box-shadow 0.3s ease;
+         -o-transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    -webkit-transform: translateY(-10px);
+       -moz-transform: translateY(-10px);
+        -ms-transform: translateY(-10px);
+         -o-transform: translateY(-10px);
+            transform: translateY(-10px);
+}
+
+#nav-menu ul {
+    display: none;
+}
+
+#nav-menu.visible ul {
+    display: block;
+}
+
+#hamburger-icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.project {
+    display: none; /* Hide projects by default */
+}
+
+/* Lightbox styles */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Error message styles */
+.error {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+    display: block;
+}
+
+/* Button styles */
+button {
+    background-color: #004080; /* Dark blue background */
+    color: #ffffff; /* White text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #003366; /* Darker blue on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    section {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    section {
+        width: 95%;
+        padding: 15px;
+    }
+
+    section h2 {
+        font-size: 1.5em;
+    }
+
+    button {
+        font-size: 1em;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.2em;
+    }
+
+    section {
+        width: 100%;
+        padding: 10px;
+    }
+
+    section h2 {
+        font-size: 1.2em;
+    }
+
+    button {
+        font-size: 0.9em;
+        padding: 6px 12px;
+    }
+}
